@@ -1,8 +1,30 @@
-import Link from 'next/link';
+'use client';
+
+import { useEffect, useState } from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
-import { portfolioData } from '@/data/portfolioData';
+import { portfolioData as initialPortfolioData } from '@/data/portfolioData';
 
 export default function Footer() {
+  const [portfolioData, setPortfolioData] = useState(initialPortfolioData);
+
+  useEffect(() => {
+    const loadPortfolio = async () => {
+      try {
+        const response = await fetch('/api/portfolio', { cache: 'no-store' });
+
+        if (!response.ok) {
+          throw new Error('Failed to load portfolio from API');
+        }
+
+        const parsed = await response.json();
+        setPortfolioData(parsed);
+      } catch (error) {
+        console.error('Failed to load portfolio content from API:', error);
+      }
+    };
+
+    loadPortfolio();
+  }, []);
   return (
     <footer className="border-t border-slate-200 bg-slate-50/80 py-10 dark:border-slate-800 dark:bg-slate-950/80">
       <div className="container-shell flex flex-col gap-8 md:flex-row md:items-end md:justify-between">

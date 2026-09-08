@@ -3,12 +3,13 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Github, Linkedin, Menu, X, SunMedium, MoonStar } from 'lucide-react';
-import { portfolioData } from '@/data/portfolioData';
+import { portfolioData as initialPortfolioData } from '@/data/portfolioData';
 
 export default function Header() {
   const [mounted, setMounted] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [theme, setTheme] = useState('dark');
+  const [portfolioData, setPortfolioData] = useState(initialPortfolioData);
 
   useEffect(() => {
     setMounted(true);
@@ -17,6 +18,23 @@ export default function Header() {
     setTheme(nextTheme);
     document.body.classList.toggle('light', nextTheme === 'light');
     document.body.classList.toggle('dark', nextTheme === 'dark');
+
+    const loadPortfolio = async () => {
+      try {
+        const response = await fetch('/api/portfolio', { cache: 'no-store' });
+
+        if (!response.ok) {
+          throw new Error('Failed to load portfolio from API');
+        }
+
+        const parsed = await response.json();
+        setPortfolioData(parsed);
+      } catch (error) {
+        console.error('Failed to load portfolio content from API:', error);
+      }
+    };
+
+    loadPortfolio();
   }, []);
 
   useEffect(() => {
