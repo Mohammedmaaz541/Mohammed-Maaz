@@ -1,8 +1,8 @@
-# Mohammed Maaz Portfolio
+# 🚀 Mohammed Maaz Portfolio
 
 A modern, production-style developer portfolio built with Next.js and JavaScript. It showcases Mohammed Maaz's profile, technical skills, professional experience, projects, certifications, achievements, blog content, and contact details.
 
-## Features
+## ✨ Features
 
 - Responsive portfolio homepage
 - About, skills, experience, projects, certifications, achievements, and blog sections
@@ -13,7 +13,7 @@ A modern, production-style developer portfolio built with Next.js and JavaScript
 - Profile photo integration
 - Centralized portfolio content in one data file
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 - Next.js 14
 - React 18
@@ -22,21 +22,21 @@ A modern, production-style developer portfolio built with Next.js and JavaScript
 - Lucide React
 - ESLint
 
-## Project Structure
+## 📁 Project Structure
 
 - `src/app` — app routes and page components
 - `src/components` — reusable UI components and layout
 - `src/data/portfolioData.js` — centralized portfolio content
 - `public` — static assets such as the profile image
 
-## Getting Started
+## ▶️ Getting Started
 
-### Prerequisites
+### ✅ Prerequisites
 
 - Node.js 18 or later
 - npm
 
-### Installation
+### 📦 Installation
 
 1. Clone the repository:
    ```bash
@@ -59,7 +59,7 @@ A modern, production-style developer portfolio built with Next.js and JavaScript
    http://localhost:3000
    ```
 
-## Available Scripts
+## 🧪 Available Scripts
 
 ```bash
 npm run dev
@@ -68,7 +68,7 @@ npm run start
 npm run lint
 ```
 
-## Build Verification
+## 🔍 Build Verification
 
 This project was verified with:
 
@@ -77,12 +77,12 @@ npm run lint
 npm run build
 ```
 
-## Notes
+## 📝 Notes
 
 - The portfolio content is stored in `src/data/portfolioData.js` for easy editing.
 - The profile photo is located in `public/Passport_size_Photograph.png`.
 - The resume link and social profiles are configured in the portfolio data file.
 
-## License
+## 📄 License
 
 This project is for personal portfolio use.
