@@ -6,10 +6,23 @@ import { requireAdminSession } from '@/lib/auth';
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-const getStorageUrlFromEndpoint = (endpoint, bucketName, key) => {
-  const endpointUrl = new URL(endpoint);
-  const baseUrl = `${endpointUrl.protocol}//${endpointUrl.hostname}`;
+const getStorageUrlFromSupabase = (supabaseUrl, bucketName, key) => {
+  if (!supabaseUrl) {
+    return null;
+  }
+
+  const baseUrl = supabaseUrl.replace(/\/$/, '');
   return `${baseUrl}/storage/v1/object/public/${bucketName}/${key}`;
+};
+
+const getStorageUrlFromEndpoint = (endpoint, bucketName, key) => {
+  try {
+    const endpointUrl = new URL(endpoint);
+    const baseUrl = `${endpointUrl.protocol}//${endpointUrl.hostname}`;
+    return `${baseUrl}/storage/v1/object/public/${bucketName}/${key}`;
+  } catch {
+    return null;
+  }
 };
 
 export async function POST(request) {
@@ -39,18 +52,22 @@ export async function POST(request) {
       return NextResponse.json({ error: 'Missing S3 configuration' }, { status: 500 });
     }
 
+    const normalizedEndpoint = endpoint.includes('/storage/v1/s3')
+      ? endpoint
+      : `${endpoint.replace(/\/$/, '')}/storage/v1/s3`;
+
     const fileExtension = file.name.includes('.') ? file.name.split('.').pop() : 'jpg';
     const key = `${folder}/${Date.now()}-${Math.random().toString(36).slice(2)}.${fileExtension}`;
     const fileBuffer = Buffer.from(await file.arrayBuffer());
 
     const s3Client = new S3Client({
       region,
-      endpoint,
+      endpoint: normalizedEndpoint,
       credentials: {
         accessKeyId,
         secretAccessKey,
       },
-      forcePathStyle: false,
+      forcePathStyle: true,
     });
 
     await s3Client.send(
@@ -59,10 +76,12 @@ export async function POST(request) {
         Key: key,
         Body: fileBuffer,
         ContentType: file.type || 'application/octet-stream',
+        ACL: 'public-read',
       }),
     );
 
-    const url = getStorageUrlFromEndpoint(endpoint, bucketName, key);
+    const url = getStorageUrlFromSupabase(process.env.NEXT_PUBLIC_SUPABASE_URL, bucketName, key)
+      || getStorageUrlFromEndpoint(normalizedEndpoint, bucketName, key);
 
     return NextResponse.json({ success: true, url });
   } catch (error) {

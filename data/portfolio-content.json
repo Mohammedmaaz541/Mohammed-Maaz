@@ -535,25 +535,6 @@
       ]
     },
     {
-      "company": "DevOps Insider",
-      "role": "Backend Developer Intern",
-      "period": "February 2026 – August 2026",
-      "location": "Remote",
-      "description": "Built backend services, REST APIs, and secure application workflows in Node.js and Express.js for internal SaaS product features.",
-      "highlights": [
-        "Node.js",
-        "Express.js",
-        "REST APIs",
-        "MongoDB",
-        "Mongoose",
-        "JWT",
-        "RBAC",
-        "API testing",
-        "MVC architecture",
-        "Git/GitHub"
-      ]
-    },
-    {
       "company": "Innomatics Research Labs",
       "role": "Full-Stack Development Intern",
       "period": "September 2024 – November 2024",

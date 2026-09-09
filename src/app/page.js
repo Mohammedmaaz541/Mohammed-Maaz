@@ -429,7 +429,13 @@ export default function HomePage() {
           <div className="grid gap-6 lg:grid-cols-2">
             {portfolioData.blogs.map((blog) => (
               <article key={blog.slug} className="overflow-hidden rounded-3xl border border-slate-200 bg-white/80 shadow-sm dark:border-slate-700 dark:bg-slate-900/70">
-                <div className="h-52 bg-gradient-to-br from-sky-500 to-violet-500" />
+                {blog.coverImage ? (
+                  <div className="relative h-52 overflow-hidden">
+                    <img src={blog.coverImage} alt={blog.title} className="h-full w-full object-cover" />
+                  </div>
+                ) : (
+                  <div className="h-52 bg-gradient-to-br from-sky-500 to-violet-500" />
+                )}
                 <div className="p-6">
                   <div className="flex items-center justify-between gap-3 text-xs uppercase tracking-[0.2em] text-sky-500">
                     <span>{blog.category}</span>

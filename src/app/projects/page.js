@@ -17,18 +17,35 @@ export default async function ProjectsPage() {
       <div className="grid gap-6 xl:grid-cols-3">
         {portfolioData.projects.map((project) => (
           <article key={project.slug} className="group overflow-hidden rounded-3xl border border-slate-200 bg-white/80 shadow-sm transition hover:-translate-y-1 hover:border-sky-400 hover:shadow-glow dark:border-slate-700 dark:bg-slate-900/70">
-            <div className={`h-40 bg-gradient-to-br ${project.accent} p-6`}>
-              <div className="flex h-full items-end justify-between">
-                <div className="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white">
-                  {project.category}
-                </div>
-                {project.badge && (
-                  <div className="rounded-full bg-slate-950/20 px-3 py-1 text-xs font-semibold text-white">
-                    {project.badge}
+            {project.image ? (
+              <div className="relative h-40 overflow-hidden">
+                <img src={project.image} alt={project.title} className="h-full w-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-6">
+                  <div className="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white">
+                    {project.category}
                   </div>
-                )}
+                  {project.badge && (
+                    <div className="rounded-full bg-slate-950/20 px-3 py-1 text-xs font-semibold text-white">
+                      {project.badge}
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
+            ) : (
+              <div className={`h-40 bg-gradient-to-br ${project.accent} p-6`}>
+                <div className="flex h-full items-end justify-between">
+                  <div className="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white">
+                    {project.category}
+                  </div>
+                  {project.badge && (
+                    <div className="rounded-full bg-slate-950/20 px-3 py-1 text-xs font-semibold text-white">
+                      {project.badge}
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
 
             <div className="p-6">
               <h2 className="text-2xl font-bold text-slate-900 dark:text-white">{project.title}</h2>
