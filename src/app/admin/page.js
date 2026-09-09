@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { portfolioData as initialPortfolioData } from '@/data/portfolioData';
+import { createEmptyPortfolio } from '@/lib/empty-portfolio';
 
 const sectionMeta = {
   profile: { label: 'Profile', description: 'Edit basic profile details and contact links.' },
@@ -100,21 +100,21 @@ const loadStoredPortfolio = async () => {
     const parsed = await response.json();
 
     return {
-      ...initialPortfolioData,
+      ...createEmptyPortfolio(),
       ...parsed,
       profile: {
-        ...initialPortfolioData.profile,
+        ...createEmptyPortfolio().profile,
         ...(parsed.profile || {}),
       },
     };
   } catch (error) {
     console.error('Failed to load stored portfolio data:', error);
-    return initialPortfolioData;
+    return createEmptyPortfolio();
   }
 };
 
 export default function AdminPage() {
-  const [portfolio, setPortfolio] = useState(initialPortfolioData);
+  const [portfolio, setPortfolio] = useState(createEmptyPortfolio());
   const [activeSection, setActiveSection] = useState('profile');
   const [status, setStatus] = useState('Loading content...');
 
@@ -161,7 +161,7 @@ export default function AdminPage() {
       }
 
       const resetPortfolioData = await response.json();
-      setPortfolio(resetPortfolioData?.portfolio || initialPortfolioData);
+      setPortfolio(resetPortfolioData?.portfolio || createEmptyPortfolio());
       setStatus('🔄 Content reset to the default portfolio data.');
     } catch (error) {
       console.error('Failed to reset portfolio content:', error);

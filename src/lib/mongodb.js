@@ -1,6 +1,6 @@
 import { MongoClient } from 'mongodb';
 import bcrypt from 'bcryptjs';
-import { portfolioData as defaultPortfolioData } from '@/data/portfolioData';
+import { createEmptyPortfolio } from '@/lib/empty-portfolio';
 
 const uri = process.env.MONGODB_URI;
 const dbName = process.env.MONGODB_DB || 'portfolio_db';
@@ -9,7 +9,7 @@ let cachedClientPromise = null;
 let cachedClient = null;
 
 export function getDefaultPortfolioData() {
-  return defaultPortfolioData;
+  return createEmptyPortfolio();
 }
 
 export async function connectToMongoDb() {
@@ -43,6 +43,7 @@ export async function ensureSeedData() {
   const settingsCollection = db.collection('settings');
   const portfolioCollection = db.collection('portfolio');
   const sessionsCollection = db.collection('sessions');
+  const defaultPortfolioData = getDefaultPortfolioData();
 
   const adminUsername = process.env.ADMIN_USERNAME || 'admin';
   const adminPasswordHash = await bcrypt.hash(process.env.ADMIN_PASSWORD || 'admin123', 10);

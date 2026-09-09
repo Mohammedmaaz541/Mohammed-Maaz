@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { ArrowRight, Github, Linkedin, Download, Sparkles, Briefcase, Cpu, Cloud, ShieldCheck, CheckCircle2, ChevronRight, MapPin } from 'lucide-react';
-import { portfolioData as initialPortfolioData } from '@/data/portfolioData';
+import { createEmptyPortfolio } from '@/lib/empty-portfolio';
 import SectionHeading from '@/components/ui/SectionHeading';
 
 const cardClass = 'rounded-2xl border border-slate-200/80 bg-white/80 p-6 shadow-sm backdrop-blur dark:border-slate-700 dark:bg-slate-900/70';
@@ -16,7 +16,7 @@ const XLogo = ({ className = 'h-5 w-5' }) => (
 );
 
 export default function HomePage() {
-  const [portfolioData, setPortfolioData] = useState(initialPortfolioData);
+  const [portfolioData, setPortfolioData] = useState(createEmptyPortfolio());
 
   useEffect(() => {
     const loadPortfolio = async () => {
@@ -31,7 +31,7 @@ export default function HomePage() {
         setPortfolioData(parsed);
       } catch (error) {
         console.error('Failed to load portfolio content from API:', error);
-        setPortfolioData(initialPortfolioData);
+        setPortfolioData(createEmptyPortfolio());
       }
     };
 

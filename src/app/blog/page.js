@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import { portfolioData } from '@/data/portfolioData';
+import { getPortfolioContent } from '@/lib/portfolio-store';
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const portfolioData = await getPortfolioContent();
   return (
     <main className="container-shell py-16">
       <div className="mb-10 max-w-2xl">

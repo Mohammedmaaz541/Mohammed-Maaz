@@ -1,0 +1,1042 @@
+{
+  "profile": {
+    "name": "Mohammed Maaz",
+    "title": "Full-Stack Developer",
+    "roles": [
+      "Full-Stack Developer",
+      "AI & Automation Engineer",
+      "Cloud & DevOps Engineer",
+      "DevSecOps Engineer"
+    ],
+    "tagline": "I build scalable web applications, AI-powered solutions, automated workflows, and secure cloud infrastructure that solve real business problems.",
+    "description": "I'm passionate about building technology that solves real business problems.",
+    "email": "mohammedmaaz2030@gmail.cm",
+    "github": "https://github.com/Mohammedmaaz541",
+    "linkedin": "https://www.linkedin.com/in/mohammedmaaz541/",
+    "x": "https://x.com/MMaaz84850",
+    "phone": "+91 79815-04874",
+    "location": "Hyderabad, Telangana",
+    "resume": "https://drive.google.com/file/d/1lyO_3Uo1nS4QfAAbohti-ND85RyHYLr6/view?usp=sharing",
+    "photo": "/Passport_size_Photograph.png"
+  },
+  "navigation": [
+    {
+      "label": "Home",
+      "href": "#home"
+    },
+    {
+      "label": "About",
+      "href": "#about"
+    },
+    {
+      "label": "Skills",
+      "href": "#skills"
+    },
+    {
+      "label": "Experience",
+      "href": "#experience"
+    },
+    {
+      "label": "Projects",
+      "href": "#projects"
+    },
+    {
+      "label": "Certifications",
+      "href": "#certifications"
+    },
+    {
+      "label": "Achievements",
+      "href": "#achievements"
+    },
+    {
+      "label": "Blog",
+      "href": "#blog"
+    },
+    {
+      "label": "Contact",
+      "href": "#contact"
+    }
+  ],
+  "processSteps": [
+    {
+      "step": "01",
+      "title": "Understand",
+      "tagline": "Clarity before code.",
+      "description": "Explore requirements, constraints, user needs, and the business problem that needs solving.",
+      "accent": "from-sky-500 to-blue-500"
+    },
+    {
+      "step": "02",
+      "title": "Design",
+      "tagline": "Ideas into systems.",
+      "description": "Map architecture, interfaces, workflows, and the information model before pushing code.",
+      "accent": "from-cyan-500 to-teal-500"
+    },
+    {
+      "step": "03",
+      "title": "Build",
+      "tagline": "Reliable products, built well.",
+      "description": "Develop reliable products with modern frontend, backend, and integration patterns.",
+      "accent": "from-violet-500 to-indigo-500"
+    },
+    {
+      "step": "04",
+      "title": "Automate",
+      "tagline": "Less manual work, more consistency.",
+      "description": "Create workflows, monitoring, and operational systems that reduce manual work.",
+      "accent": "from-emerald-500 to-teal-500"
+    },
+    {
+      "step": "05",
+      "title": "Secure",
+      "tagline": "Protect what matters.",
+      "description": "Embed security practices, governance, and access controls from the beginning.",
+      "accent": "from-amber-500 to-orange-500"
+    },
+    {
+      "step": "06",
+      "title": "Deploy",
+      "tagline": "Launch with confidence.",
+      "description": "Ship through CI/CD pipelines with reproducible environments and controlled releases.",
+      "accent": "from-pink-500 to-rose-500"
+    },
+    {
+      "step": "07",
+      "title": "Scale",
+      "tagline": "Grow without chaos.",
+      "description": "Tune infrastructure, observability, and resilience for long-term product growth.",
+      "accent": "from-indigo-500 to-sky-500"
+    },
+    {
+      "step": "08",
+      "title": "Support",
+      "tagline": "Keep systems healthy.",
+      "description": "Monitor performance, refine workflows, and improve the product continuously after launch.",
+      "accent": "from-teal-500 to-cyan-500"
+    }
+  ],
+  "skills": [
+    {
+      "name": "JavaScript",
+      "category": "Languages",
+      "icon": "Code2",
+      "level": "Advanced",
+      "yearsOfExperience": 4,
+      "featured": true
+    },
+    {
+      "name": "Python",
+      "category": "Languages",
+      "icon": "Cpu",
+      "level": "Advanced",
+      "yearsOfExperience": 4,
+      "featured": true
+    },
+    {
+      "name": "HTML5",
+      "category": "Languages",
+      "icon": "LayoutTemplate",
+      "level": "Advanced",
+      "yearsOfExperience": 4,
+      "featured": false
+    },
+    {
+      "name": "CSS3",
+      "category": "Languages",
+      "icon": "Palette",
+      "level": "Advanced",
+      "yearsOfExperience": 4,
+      "featured": false
+    },
+    {
+      "name": "React.js",
+      "category": "Frontend",
+      "icon": "React",
+      "level": "Advanced",
+      "yearsOfExperience": 4,
+      "featured": true
+    },
+    {
+      "name": "Next.js",
+      "category": "Frontend",
+      "icon": "Layers3",
+      "level": "Advanced",
+      "yearsOfExperience": 3,
+      "featured": true
+    },
+    {
+      "name": "Redux",
+      "category": "Frontend",
+      "icon": "Workflow",
+      "level": "Intermediate",
+      "yearsOfExperience": 2,
+      "featured": false
+    },
+    {
+      "name": "React Router",
+      "category": "Frontend",
+      "icon": "Route",
+      "level": "Intermediate",
+      "yearsOfExperience": 2,
+      "featured": false
+    },
+    {
+      "name": "Tailwind CSS",
+      "category": "Frontend",
+      "icon": "BrushCleaning",
+      "level": "Advanced",
+      "yearsOfExperience": 3,
+      "featured": true
+    },
+    {
+      "name": "PrimeReact",
+      "category": "Frontend",
+      "icon": "Component",
+      "level": "Intermediate",
+      "yearsOfExperience": 2,
+      "featured": false
+    },
+    {
+      "name": "Node.js",
+      "category": "Backend",
+      "icon": "Server",
+      "level": "Advanced",
+      "yearsOfExperience": 4,
+      "featured": true
+    },
+    {
+      "name": "Express.js",
+      "category": "Backend",
+      "icon": "Globe",
+      "level": "Advanced",
+      "yearsOfExperience": 3,
+      "featured": true
+    },
+    {
+      "name": "REST APIs",
+      "category": "Backend",
+      "icon": "ArrowRightLeft",
+      "level": "Advanced",
+      "yearsOfExperience": 4,
+      "featured": true
+    },
+    {
+      "name": "JWT",
+      "category": "Backend",
+      "icon": "ShieldCheck",
+      "level": "Intermediate",
+      "yearsOfExperience": 2,
+      "featured": false
+    },
+    {
+      "name": "RBAC",
+      "category": "Backend",
+      "icon": "LockKeyhole",
+      "level": "Intermediate",
+      "yearsOfExperience": 2,
+      "featured": false
+    },
+    {
+      "name": "Generative AI",
+      "category": "AI & Generative AI",
+      "icon": "Sparkles",
+      "level": "Advanced",
+      "yearsOfExperience": 2,
+      "featured": true
+    },
+    {
+      "name": "LLMs",
+      "category": "AI & Generative AI",
+      "icon": "Bot",
+      "level": "Advanced",
+      "yearsOfExperience": 2,
+      "featured": true
+    },
+    {
+      "name": "Prompt Engineering",
+      "category": "AI & Generative AI",
+      "icon": "MessageSquareText",
+      "level": "Advanced",
+      "yearsOfExperience": 2,
+      "featured": true
+    },
+    {
+      "name": "RAG",
+      "category": "AI & Generative AI",
+      "icon": "DatabaseZap",
+      "level": "Intermediate",
+      "yearsOfExperience": 2,
+      "featured": false
+    },
+    {
+      "name": "LangChain",
+      "category": "AI & Generative AI",
+      "icon": "Blocks",
+      "level": "Intermediate",
+      "yearsOfExperience": 1,
+      "featured": false
+    },
+    {
+      "name": "LangGraph",
+      "category": "AI & Generative AI",
+      "icon": "GitBranch",
+      "level": "Intermediate",
+      "yearsOfExperience": 1,
+      "featured": false
+    },
+    {
+      "name": "AI API Integration",
+      "category": "AI & Generative AI",
+      "icon": "Waypoints",
+      "level": "Advanced",
+      "yearsOfExperience": 2,
+      "featured": true
+    },
+    {
+      "name": "AI-powered Applications",
+      "category": "AI & Generative AI",
+      "icon": "BrainCircuit",
+      "level": "Advanced",
+      "yearsOfExperience": 2,
+      "featured": true
+    },
+    {
+      "name": "MongoDB",
+      "category": "Database",
+      "icon": "Database",
+      "level": "Advanced",
+      "yearsOfExperience": 3,
+      "featured": true
+    },
+    {
+      "name": "MySQL",
+      "category": "Database",
+      "icon": "TableProperties",
+      "level": "Intermediate",
+      "yearsOfExperience": 2,
+      "featured": false
+    },
+    {
+      "name": "Prisma ORM",
+      "category": "Database",
+      "icon": "FolderKanban",
+      "level": "Intermediate",
+      "yearsOfExperience": 2,
+      "featured": false
+    },
+    {
+      "name": "Azure",
+      "category": "Cloud & DevOps",
+      "icon": "Cloud",
+      "level": "Advanced",
+      "yearsOfExperience": 2,
+      "featured": true
+    },
+    {
+      "name": "Terraform",
+      "category": "Cloud & DevOps",
+      "icon": "Waypoints",
+      "level": "Advanced",
+      "yearsOfExperience": 2,
+      "featured": true
+    },
+    {
+      "name": "Docker",
+      "category": "Cloud & DevOps",
+      "icon": "Package",
+      "level": "Advanced",
+      "yearsOfExperience": 2,
+      "featured": true
+    },
+    {
+      "name": "Kubernetes",
+      "category": "Cloud & DevOps",
+      "icon": "ShipWheel",
+      "level": "Intermediate",
+      "yearsOfExperience": 1,
+      "featured": false
+    },
+    {
+      "name": "AKS",
+      "category": "Cloud & DevOps",
+      "icon": "CloudCog",
+      "level": "Intermediate",
+      "yearsOfExperience": 1,
+      "featured": false
+    },
+    {
+      "name": "Git",
+      "category": "Cloud & DevOps",
+      "icon": "GitBranch",
+      "level": "Advanced",
+      "yearsOfExperience": 4,
+      "featured": true
+    },
+    {
+      "name": "GitHub",
+      "category": "Cloud & DevOps",
+      "icon": "Github",
+      "level": "Advanced",
+      "yearsOfExperience": 4,
+      "featured": true
+    },
+    {
+      "name": "GitHub Actions",
+      "category": "Cloud & DevOps",
+      "icon": "Rocket",
+      "level": "Advanced",
+      "yearsOfExperience": 2,
+      "featured": true
+    },
+    {
+      "name": "Azure DevOps",
+      "category": "Cloud & DevOps",
+      "icon": "Pipette",
+      "level": "Advanced",
+      "yearsOfExperience": 2,
+      "featured": false
+    },
+    {
+      "name": "CI/CD",
+      "category": "Cloud & DevOps",
+      "icon": "Workflow",
+      "level": "Advanced",
+      "yearsOfExperience": 2,
+      "featured": true
+    },
+    {
+      "name": "CodeQL",
+      "category": "DevSecOps",
+      "icon": "Shield",
+      "level": "Intermediate",
+      "yearsOfExperience": 1,
+      "featured": false
+    },
+    {
+      "name": "Snyk",
+      "category": "DevSecOps",
+      "icon": "ShieldAlert",
+      "level": "Intermediate",
+      "yearsOfExperience": 1,
+      "featured": false
+    },
+    {
+      "name": "GitLeaks",
+      "category": "DevSecOps",
+      "icon": "ScanSearch",
+      "level": "Intermediate",
+      "yearsOfExperience": 1,
+      "featured": false
+    },
+    {
+      "name": "Checkov",
+      "category": "DevSecOps",
+      "icon": "ShieldPlus",
+      "level": "Intermediate",
+      "yearsOfExperience": 1,
+      "featured": false
+    },
+    {
+      "name": "TFLint",
+      "category": "DevSecOps",
+      "icon": "CheckCheck",
+      "level": "Intermediate",
+      "yearsOfExperience": 1,
+      "featured": false
+    },
+    {
+      "name": "tfsec",
+      "category": "DevSecOps",
+      "icon": "ShieldQuestion",
+      "level": "Intermediate",
+      "yearsOfExperience": 1,
+      "featured": false
+    },
+    {
+      "name": "Terratest",
+      "category": "DevSecOps",
+      "icon": "TestTubeDiagonal",
+      "level": "Intermediate",
+      "yearsOfExperience": 1,
+      "featured": false
+    },
+    {
+      "name": "Infracost",
+      "category": "DevSecOps",
+      "icon": "Coins",
+      "level": "Intermediate",
+      "yearsOfExperience": 1,
+      "featured": false
+    },
+    {
+      "name": "Azure Monitor",
+      "category": "Monitoring",
+      "icon": "Activity",
+      "level": "Intermediate",
+      "yearsOfExperience": 2,
+      "featured": false
+    },
+    {
+      "name": "Log Analytics",
+      "category": "Monitoring",
+      "icon": "BarChart3",
+      "level": "Intermediate",
+      "yearsOfExperience": 2,
+      "featured": false
+    },
+    {
+      "name": "Application Insights",
+      "category": "Monitoring",
+      "icon": "Gauge",
+      "level": "Intermediate",
+      "yearsOfExperience": 2,
+      "featured": false
+    },
+    {
+      "name": "Prometheus",
+      "category": "Monitoring",
+      "icon": "Radar",
+      "level": "Intermediate",
+      "yearsOfExperience": 1,
+      "featured": false
+    },
+    {
+      "name": "Grafana",
+      "category": "Monitoring",
+      "icon": "ChartNoAxesCombined",
+      "level": "Intermediate",
+      "yearsOfExperience": 1,
+      "featured": false
+    }
+  ],
+  "experiences": [
+    {
+      "company": "DevOps Insider",
+      "role": "DevOps & Infrastructure Engineer Intern",
+      "period": "February 2026 – August 2026",
+      "location": "Remote",
+      "description": "Worked on Azure infrastructure automation, CI/CD process design, and cloud governance using Terraform and Azure-native services.",
+      "highlights": [
+        "Azure infrastructure",
+        "Terraform",
+        "Terraform modules",
+        "Azure DevOps",
+        "GitHub Actions",
+        "CI/CD",
+        "IAM",
+        "Azure RBAC",
+        "Managed Identity",
+        "Azure Key Vault",
+        "Azure Policy",
+        "Microsoft Defender for Cloud",
+        "Azure Monitor",
+        "Prometheus",
+        "Grafana"
+      ]
+    },
+    {
+      "company": "DevOps Insider",
+      "role": "Backend Developer Intern",
+      "period": "February 2026 – August 2026",
+      "location": "Remote",
+      "description": "Built backend services, REST APIs, and secure application workflows in Node.js and Express.js for internal SaaS product features.",
+      "highlights": [
+        "Node.js",
+        "Express.js",
+        "REST APIs",
+        "MongoDB",
+        "Mongoose",
+        "JWT",
+        "RBAC",
+        "API testing",
+        "MVC architecture",
+        "Git/GitHub"
+      ]
+    },
+    {
+      "company": "Innomatics Research Labs",
+      "role": "Full-Stack Development Intern",
+      "period": "September 2024 – November 2024",
+      "location": "Remote",
+      "description": "Contributed to responsive frontend interfaces and full-stack application development using the MERN stack.",
+      "highlights": [
+        "MERN stack",
+        "React",
+        "Tailwind CSS",
+        "REST APIs",
+        "Axios",
+        "CRUD",
+        "MVC",
+        "Responsive UI"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "slug": "automobile-roadside-service-platform",
+      "title": "Automobile Roadside Service Platform",
+      "subtitle": "On-demand vehicle support and repair coordination",
+      "category": "Full Stack",
+      "description": "A full-stack platform connecting customers with mechanics for on-demand roadside assistance and vehicle repair.",
+      "technologies": [
+        "Next.js",
+        "Node.js",
+        "MongoDB",
+        "Prisma ORM",
+        "DigitalOcean Spaces",
+        "PrimeReact"
+      ],
+      "features": [
+        "Service requests",
+        "Vehicle information",
+        "Breakdown description",
+        "Location",
+        "Mechanic matching",
+        "Real-time notifications",
+        "Mechanic onboarding",
+        "Profile management",
+        "Service catalog",
+        "Booking management",
+        "Service history",
+        "RBAC",
+        "REST APIs"
+      ],
+      "github": "https://github.com/Mohammedmaaz541",
+      "demo": "https://example.com",
+      "caseStudy": "/projects/automobile-roadside-service-platform",
+      "badge": null,
+      "accent": "from-sky-500 to-blue-500",
+      "architecture": [
+        "Users",
+        "Service Request Flow",
+        "Mechanic Matching",
+        "Booking & Fulfillment"
+      ]
+    },
+    {
+      "slug": "travel-visa-services-platform",
+      "title": "Travel & Visa Services Platform",
+      "subtitle": "Multi-Tenant B2B SaaS",
+      "category": "SaaS",
+      "description": "A multi-tenant B2B SaaS platform for travel and visa services with marketplace, CRM, billing, and agency workflows.",
+      "technologies": [
+        "Next.js",
+        "MongoDB",
+        "Prisma",
+        "DigitalOcean Spaces",
+        "PrimeReact"
+      ],
+      "features": [
+        "Marketplace",
+        "CRM",
+        "Enquiry management",
+        "Draft packages",
+        "Booking management",
+        "Order management",
+        "Wallet",
+        "Escrow",
+        "Document management",
+        "Billing",
+        "Invoicing",
+        "WhatsApp notifications"
+      ],
+      "roles": [
+        "Super Admin",
+        "Admin",
+        "Vendor",
+        "Agency Owner",
+        "Agency Staff"
+      ],
+      "github": "https://github.com/Mohammedmaaz541",
+      "demo": "https://example.com",
+      "caseStudy": "/projects/travel-visa-services-platform",
+      "badge": "Multi-tenant",
+      "accent": "from-violet-500 to-indigo-500",
+      "architecture": [
+        "Marketplace",
+        "Agency Workflows",
+        "Order Lifecycle",
+        "Wallet & Invoicing"
+      ]
+    },
+    {
+      "slug": "brain-stroke-detection-system",
+      "title": "Brain Stroke Detection System",
+      "subtitle": "AI Healthcare Application",
+      "category": "AI",
+      "description": "An AI healthcare application for brain scan upload, medical prediction, and result visualization.",
+      "technologies": [
+        "React.js",
+        "Flask",
+        "SQLite",
+        "Python",
+        "CNN",
+        "Deep Learning"
+      ],
+      "features": [
+        "Brain scan upload",
+        "AI prediction",
+        "Result visualization",
+        "React frontend",
+        "Flask backend"
+      ],
+      "github": "https://github.com/Mohammedmaaz541",
+      "demo": "https://example.com",
+      "caseStudy": "/projects/brain-stroke-detection-system",
+      "badge": "Research Project",
+      "accent": "from-emerald-500 to-teal-500",
+      "architecture": [
+        "Upload Interface",
+        "AI Model Inference",
+        "Result Dashboard"
+      ]
+    },
+    {
+      "slug": "enterprise-azure-landing-zone",
+      "title": "Enterprise Azure Landing Zone",
+      "subtitle": "Production-Grade Cloud Infrastructure Automation",
+      "category": "Cloud",
+      "description": "Production-grade Azure landing zone built with Terraform and Azure-native services for secure, scalable, and governed cloud operations.",
+      "technologies": [
+        "Azure",
+        "Terraform",
+        "Azure Front Door",
+        "Application Gateway",
+        "WAF",
+        "Azure Load Balancer",
+        "Azure Bastion",
+        "VNet",
+        "NSG",
+        "Route Tables",
+        "Private Endpoints",
+        "Private DNS",
+        "Azure Key Vault",
+        "Azure Monitor",
+        "Log Analytics",
+        "Application Insights",
+        "Recovery Services Vault"
+      ],
+      "features": [
+        "Terraform modules",
+        "Remote state",
+        "High availability",
+        "Governance",
+        "RBAC",
+        "Managed Identity",
+        "Disaster recovery",
+        "Monitoring"
+      ],
+      "github": "https://github.com/Mohammedmaaz541",
+      "demo": "https://example.com",
+      "caseStudy": "/projects/enterprise-azure-landing-zone",
+      "badge": "Azure",
+      "accent": "from-sky-500 to-cyan-500",
+      "architecture": [
+        "Users",
+        "Azure Front Door",
+        "Application Gateway + WAF",
+        "Web Tier",
+        "Application Tier",
+        "Database Tier"
+      ]
+    },
+    {
+      "slug": "enterprise-cicd-devsecops-pipeline",
+      "title": "Enterprise CI/CD & DevSecOps Pipeline",
+      "subtitle": "Secure release and validation platform",
+      "category": "DevOps",
+      "description": "An interactive pipeline architecture for secure code delivery with validation, scanning, approval, deployment, and monitoring.",
+      "technologies": [
+        "GitHub Actions",
+        "Azure DevOps",
+        "Terraform",
+        "TFLint",
+        "tfsec",
+        "Checkov",
+        "Infracost",
+        "GitLeaks",
+        "Terratest",
+        "SonarQube",
+        "Docker",
+        "Azure Container Registry"
+      ],
+      "features": [
+        "Code quality checks",
+        "Security scanning",
+        "Terraform validation",
+        "Plan review",
+        "Approval gate",
+        "Deployment orchestration",
+        "Monitoring"
+      ],
+      "github": "https://github.com/Mohammedmaaz541",
+      "demo": "https://example.com",
+      "caseStudy": "/projects/enterprise-cicd-devsecops-pipeline",
+      "badge": "Pipeline",
+      "accent": "from-orange-500 to-red-500",
+      "architecture": [
+        "Developer",
+        "Feature Branch",
+        "Pull Request",
+        "CI",
+        "Code Quality",
+        "Security Scan",
+        "Terraform Validation",
+        "Terraform Plan",
+        "Approval",
+        "Deployment",
+        "Monitoring"
+      ]
+    },
+    {
+      "slug": "enterprise-e-commerce-platform",
+      "title": "Enterprise E-Commerce Platform",
+      "subtitle": "Azure Cloud-Native Microservices & DevOps",
+      "category": "Cloud",
+      "description": "A cloud-native microservices commerce platform running on AKS with zero-downtime deployments and strong observability.",
+      "technologies": [
+        "Azure",
+        "AKS",
+        "Docker",
+        "Kubernetes",
+        "Terraform",
+        "ACR",
+        "Helm",
+        "Prometheus",
+        "Grafana",
+        "Azure Monitor",
+        "Log Analytics"
+      ],
+      "features": [
+        "Microservices",
+        "Kubernetes",
+        "Horizontal Pod Autoscaler",
+        "ReplicaSets",
+        "Liveness probes",
+        "Readiness probes",
+        "Rolling deployments",
+        "Zero-downtime deployments",
+        "PV/PVC",
+        "Storage Classes",
+        "Kubernetes RBAC",
+        "Azure RBAC",
+        "Managed Identity",
+        "Key Vault"
+      ],
+      "github": "https://github.com/Mohammedmaaz541",
+      "demo": "https://example.com",
+      "caseStudy": "/projects/enterprise-e-commerce-platform",
+      "badge": "Microservices",
+      "accent": "from-fuchsia-500 to-purple-500",
+      "architecture": [
+        "Ingress",
+        "API Services",
+        "Worker Services",
+        "Database",
+        "Observability"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Azure Fundamentals (AZ-900)",
+      "issuer": "Microsoft",
+      "issueDate": "2025",
+      "credentialId": "AZ-900",
+      "credentialUrl": "#",
+      "image": "",
+      "skills": [
+        "Azure",
+        "Cloud"
+      ]
+    },
+    {
+      "title": "Terraform for Infrastructure as Code",
+      "issuer": "HashiCorp",
+      "issueDate": "2025",
+      "credentialId": "TF-101",
+      "credentialUrl": "#",
+      "image": "",
+      "skills": [
+        "Terraform",
+        "IaC"
+      ]
+    },
+    {
+      "title": "Cloud & DevOps Fundamentals",
+      "issuer": "Skillset",
+      "issueDate": "2025",
+      "credentialId": "CDO-01",
+      "credentialUrl": "#",
+      "image": "",
+      "skills": [
+        "DevOps",
+        "Cloud"
+      ]
+    },
+    {
+      "title": "Web Development / MERN Stack Development",
+      "issuer": "Innomatics",
+      "issueDate": "2024",
+      "credentialId": "MERN-01",
+      "credentialUrl": "#",
+      "image": "",
+      "skills": [
+        "React",
+        "Node.js",
+        "MongoDB"
+      ]
+    },
+    {
+      "title": "MERN Full Stack and Mobile App Development",
+      "issuer": "Innomatics",
+      "issueDate": "2024",
+      "credentialId": "MERN-MOBILE-01",
+      "credentialUrl": "#",
+      "image": "",
+      "skills": [
+        "MERN",
+        "Mobile"
+      ]
+    },
+    {
+      "title": "AI-Powered Web and Mobile App Development",
+      "issuer": "Innomatics",
+      "issueDate": "2024",
+      "credentialId": "AI-WEB-01",
+      "credentialUrl": "#",
+      "image": "",
+      "skills": [
+        "AI",
+        "Web Apps"
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "title": "HackPrix",
+      "description": "Participated in HackPrix.",
+      "date": "2025",
+      "organization": "HackPrix",
+      "image": "",
+      "link": "#",
+      "featured": true
+    },
+    {
+      "title": "Agentathon",
+      "description": "Participated in Agentathon.",
+      "date": "2025",
+      "organization": "Agentathon",
+      "image": "",
+      "link": "#",
+      "featured": true
+    },
+    {
+      "title": "Spark Hackathon",
+      "description": "Participated in Spark Hackathon.",
+      "date": "2025",
+      "organization": "Spark Hackathon",
+      "image": "",
+      "link": "#",
+      "featured": true
+    },
+    {
+      "title": "Research Publication",
+      "description": "Published research paper on Brain Stroke Detection Using Deep Learning.",
+      "date": "2025",
+      "organization": "Research",
+      "image": "",
+      "link": "#",
+      "featured": true
+    }
+  ],
+  "blogs": [
+    {
+      "slug": "building-production-ready-ai-workflows",
+      "title": "Building Production-Ready AI Workflows",
+      "excerpt": "A practical guide to designing AI-powered applications with reliability, guardrails, and measurable outcomes.",
+      "content": [
+        "AI systems are most valuable when they are dependable, observable, and tightly aligned with business outcomes. In this article, I discuss how to design, test, and iterate AI workflows that teams can trust in production.",
+        "The first step is to define a clear task boundary. Rather than asking a model to solve everything at once, break the workflow into well-scoped steps, validate each stage, and measure success with concrete signals.",
+        "Second, apply guardrails around prompts, data, and outputs. Use moderation, sanitization, fallback strategies, and human review points where the cost of mistakes is high.",
+        "Finally, invest in monitoring. Track latency, token usage, answer quality, and failure modes so the system can evolve without introducing regressions."
+      ],
+      "coverImage": "",
+      "tags": [
+        "AI",
+        "Generative AI",
+        "DevOps"
+      ],
+      "published": true,
+      "publishedAt": "2026-09-01",
+      "readingTime": "6 min read",
+      "author": "Mohammed Maaz",
+      "category": "AI"
+    },
+    {
+      "slug": "cloud-architecture-principles-for-scalable-saas",
+      "title": "Cloud Architecture Principles for Scalable SaaS",
+      "excerpt": "How to design cloud environments that are secure, resilient, cost-aware, and ready for growth.",
+      "content": [
+        "Scalable SaaS depends on architecture decisions made early. A well-designed platform balances performance, security, operational clarity, and cost control.",
+        "Start with a clear separation of concerns between edge, application, data, and observability layers. This makes it easier to scale individual parts without redesigning the entire system.",
+        "Use infrastructure as code, automated pipelines, and environment parity so environments remain reproducible. Reliable deployment practices reduce risk when product requirements change quickly.",
+        "Finally, do not neglect governance. Well-defined RBAC, secrets handling, monitoring, and policy controls support safe adoption across teams and tenants."
+      ],
+      "coverImage": "",
+      "tags": [
+        "Azure",
+        "Terraform",
+        "Cloud"
+      ],
+      "published": true,
+      "publishedAt": "2026-08-14",
+      "readingTime": "5 min read",
+      "author": "Mohammed Maaz",
+      "category": "Azure"
+    }
+  ],
+  "github": {
+    "profile": "https://github.com/Mohammedmaaz541",
+    "username": "Mohammedmaaz541",
+    "repositories": [
+      {
+        "name": "Roadside-Service-Platform",
+        "description": "Full-stack platform for mechanics and roadside service requests.",
+        "language": "Next.js",
+        "stars": 12,
+        "forks": 3
+      },
+      {
+        "name": "Azure-Landing-Zone",
+        "description": "Terraform-based Azure landing zone with security and governance controls.",
+        "language": "HCL",
+        "stars": 9,
+        "forks": 2
+      },
+      {
+        "name": "AI-Healthcare-Pipeline",
+        "description": "AI healthcare pipeline with prediction and monitoring workflows.",
+        "language": "Python",
+        "stars": 8,
+        "forks": 1
+      }
+    ]
+  },
+  "contact": {
+    "email": "mohammedmaaz2030@gmail.cm",
+    "phone": "+91 79815-04874",
+    "linkedin": "https://www.linkedin.com/in/mohammedmaaz541/",
+    "github": "https://github.com/Mohammedmaaz541"
+  },
+  "resume": {
+    "title": "Resume",
+    "items": [
+      "Full-Stack Development",
+      "AI & Automation Engineering",
+      "Cloud Architecture",
+      "DevOps & DevSecOps",
+      "Infrastructure as Code"
+    ]
+  }
+}

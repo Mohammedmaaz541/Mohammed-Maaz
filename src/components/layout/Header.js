@@ -3,13 +3,19 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Github, Linkedin, Menu, X, SunMedium, MoonStar } from 'lucide-react';
-import { portfolioData as initialPortfolioData } from '@/data/portfolioData';
+import { createEmptyPortfolio } from '@/lib/empty-portfolio';
 
 export default function Header() {
   const [mounted, setMounted] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [theme, setTheme] = useState('dark');
-  const [portfolioData, setPortfolioData] = useState(initialPortfolioData);
+  const [portfolioData, setPortfolioData] = useState(createEmptyPortfolio());
+
+  const navigationItems = Array.isArray(portfolioData.navigation)
+    ? portfolioData.navigation
+    : createEmptyPortfolio().navigation;
+
+  const profile = portfolioData.profile || createEmptyPortfolio().profile;
 
   useEffect(() => {
     setMounted(true);
@@ -52,11 +58,11 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/80 backdrop-blur-xl dark:border-slate-800 dark:bg-slate-950/80">
       <div className="container-shell flex items-center justify-between py-4">
         <Link href="#home" className="text-lg font-semibold tracking-wide text-slate-900 dark:text-white">
-          {portfolioData.profile.name}
+          {profile.name}
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
-          {portfolioData.navigation.map((item) => (
+          {navigationItems.map((item) => (
             <Link
               key={item.label}
               href={item.href}
@@ -68,10 +74,10 @@ export default function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
-          <a href={portfolioData.profile.github} target="_blank" rel="noreferrer" aria-label="GitHub" className="rounded-full border border-slate-200 p-2 text-slate-700 transition hover:border-sky-400 hover:text-sky-500 dark:border-slate-700 dark:text-slate-300">
+          <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub" className="rounded-full border border-slate-200 p-2 text-slate-700 transition hover:border-sky-400 hover:text-sky-500 dark:border-slate-700 dark:text-slate-300">
             <Github className="h-4 w-4" />
           </a>
-          <a href={portfolioData.profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="rounded-full border border-slate-200 p-2 text-slate-700 transition hover:border-sky-400 hover:text-sky-500 dark:border-slate-700 dark:text-slate-300">
+          <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="rounded-full border border-slate-200 p-2 text-slate-700 transition hover:border-sky-400 hover:text-sky-500 dark:border-slate-700 dark:text-slate-300">
             <Linkedin className="h-4 w-4" />
           </a>
           <button
@@ -82,7 +88,7 @@ export default function Header() {
             {mounted && theme === 'dark' ? <SunMedium className="h-4 w-4" /> : <MoonStar className="h-4 w-4" />}
           </button>
           <a
-            href={portfolioData.profile.resume}
+            href={profile.resume}
             className="rounded-full bg-sky-500 px-4 py-2 text-sm font-medium text-white transition hover:bg-sky-400"
           >
             Resume
@@ -101,7 +107,7 @@ export default function Header() {
       {mobileOpen && (
         <div className="border-t border-slate-200 bg-white/95 px-4 py-4 dark:border-slate-800 dark:bg-slate-950/95 md:hidden">
           <div className="flex flex-col gap-4">
-            {portfolioData.navigation.map((item) => (
+            {navigationItems.map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
@@ -113,10 +119,10 @@ export default function Header() {
             ))}
             <div className="flex items-center justify-between pt-2">
               <div className="flex items-center gap-2">
-                <a href={portfolioData.profile.github} target="_blank" rel="noreferrer" className="rounded-full border border-slate-200 p-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">
+                <a href={profile.github} target="_blank" rel="noreferrer" className="rounded-full border border-slate-200 p-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">
                   <Github className="h-4 w-4" />
                 </a>
-                <a href={portfolioData.profile.linkedin} target="_blank" rel="noreferrer" className="rounded-full border border-slate-200 p-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">
+                <a href={profile.linkedin} target="_blank" rel="noreferrer" className="rounded-full border border-slate-200 p-2 text-slate-700 dark:border-slate-700 dark:text-slate-300">
                   <Linkedin className="h-4 w-4" />
                 </a>
               </div>

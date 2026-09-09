@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
-import { portfolioData as initialPortfolioData } from '@/data/portfolioData';
+import { createEmptyPortfolio } from '@/lib/empty-portfolio';
 
 export default function Footer() {
-  const [portfolioData, setPortfolioData] = useState(initialPortfolioData);
+  const [portfolioData, setPortfolioData] = useState(createEmptyPortfolio());
 
   useEffect(() => {
     const loadPortfolio = async () => {

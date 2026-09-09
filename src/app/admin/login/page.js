@@ -22,7 +22,13 @@ export default function AdminLoginPage() {
         body: JSON.stringify({ username, password }),
       });
 
-      const data = await response.json();
+      let data = {};
+
+      try {
+        data = await response.json();
+      } catch {
+        data = { error: 'Login request failed. Please try again.' };
+      }
 
       if (!response.ok) {
         throw new Error(data.error || 'Login failed');

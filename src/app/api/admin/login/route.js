@@ -5,7 +5,18 @@ export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
 export async function POST(request) {
-  const { username, password } = await request.json();
+  let body;
+
+  try {
+    body = await request.json();
+  } catch {
+    return NextResponse.json(
+      { error: 'Invalid request body.' },
+      { status: 400 },
+    );
+  }
+
+  const { username, password } = body;
 
   if (!username || !password) {
     return NextResponse.json(
@@ -14,25 +25,45 @@ export async function POST(request) {
     );
   }
 
-  const validCredentials = await verifyAdminCredentials(username, password);
+  try {
+    const validCredentials = await verifyAdminCredentials(username, password);
 
-  if (!validCredentials) {
+    if (!validCredentials) {
+      return NextResponse.json(
+        { error: 'Invalid username or password.' },
+        { status: 401 },
+      );
+    }
+
+    const sessionToken = await createAdminSession();
+
+    if (!sessionToken) {
+      return NextResponse.json(
+        { error: 'Failed to create admin session.' },
+        { status: 500 },
+      );
+    }
+
+    const response = NextResponse.json({ success: true });
+
+    response.cookies.set('portfolio_admin_session', sessionToken, {
+      httpOnly: true,
+      sameSite: 'lax',
+      path: '/',
+      secure: false,
+      maxAge: 60 * 60 * 12,
+    });
+
+    return response;
+  } catch (error) {
+    console.error('Admin login failed:', error);
+
     return NextResponse.json(
-      { error: 'Invalid username or password.' },
-      { status: 401 },
+      {
+        error:
+          'Failed to authenticate admin. Please verify the MongoDB connection and environment settings.',
+      },
+      { status: 500 },
     );
   }
-
-  const sessionToken = await createAdminSession();
-  const response = NextResponse.json({ success: true });
-
-  response.cookies.set('portfolio_admin_session', sessionToken, {
-    httpOnly: true,
-    sameSite: 'lax',
-    path: '/',
-    secure: false,
-    maxAge: 60 * 60 * 12,
-  });
-
-  return response;
 }

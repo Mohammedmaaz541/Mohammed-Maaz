@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
-import { portfolioData } from '@/data/portfolioData';
+import { getPortfolioContent } from '@/lib/portfolio-store';
 
-export default function BlogDetailPage({ params }) {
+export default async function BlogDetailPage({ params }) {
+  const portfolioData = await getPortfolioContent();
   const blog = portfolioData.blogs.find((item) => item.slug === params.slug);
 
   if (!blog) {

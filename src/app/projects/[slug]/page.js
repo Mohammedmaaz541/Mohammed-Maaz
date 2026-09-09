@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowLeft, Github, Globe } from 'lucide-react';
-import { portfolioData } from '@/data/portfolioData';
+import { getPortfolioContent } from '@/lib/portfolio-store';
 
-export default function ProjectDetailPage({ params }) {
+export default async function ProjectDetailPage({ params }) {
+  const portfolioData = await getPortfolioContent();
   const project = portfolioData.projects.find((item) => item.slug === params.slug);
 
   if (!project) {
