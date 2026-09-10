@@ -31,3 +31,10 @@ dist/
 build/
 
 prrtfolio.md
+
+
+# Local / development folders
+.agents/
+.claude/
+data/
+scripts/
