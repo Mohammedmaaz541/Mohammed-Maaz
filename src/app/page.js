@@ -1,7 +1,10 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import { ArrowRight, Github, Linkedin, Download, Sparkles, Briefcase, Cpu, Cloud, ShieldCheck, CheckCircle2, ChevronRight, MapPin } from 'lucide-react';
-import { portfolioData } from '@/data/portfolioData';
+import { createEmptyPortfolio } from '@/lib/empty-portfolio';
 import SectionHeading from '@/components/ui/SectionHeading';
 
 const cardClass = 'rounded-2xl border border-slate-200/80 bg-white/80 p-6 shadow-sm backdrop-blur dark:border-slate-700 dark:bg-slate-900/70';
@@ -13,6 +16,28 @@ const XLogo = ({ className = 'h-5 w-5' }) => (
 );
 
 export default function HomePage() {
+  const [portfolioData, setPortfolioData] = useState(createEmptyPortfolio());
+
+  useEffect(() => {
+    const loadPortfolio = async () => {
+      try {
+        const response = await fetch('/api/portfolio', { cache: 'no-store' });
+
+        if (!response.ok) {
+          throw new Error('Failed to load portfolio from API');
+        }
+
+        const parsed = await response.json();
+        setPortfolioData(parsed);
+      } catch (error) {
+        console.error('Failed to load portfolio content from API:', error);
+        setPortfolioData(createEmptyPortfolio());
+      }
+    };
+
+    loadPortfolio();
+  }, []);
+
   return (
     <div>
       <section id="home" className="relative overflow-hidden">
@@ -192,6 +217,7 @@ export default function HomePage() {
                   {step.step}
                 </div>
                 <h3 className="mb-2 text-xl font-bold text-slate-900 dark:text-white">{step.title}</h3>
+                <p className="mb-3 text-sm font-medium uppercase tracking-[0.08em] text-sky-600 dark:text-sky-300">{step.tagline}</p>
                 <p className="text-slate-600 dark:text-slate-300">{step.description}</p>
               </div>
             ))}
@@ -280,18 +306,35 @@ export default function HomePage() {
           <div className="grid gap-6 xl:grid-cols-3">
             {portfolioData.projects.map((project) => (
               <article key={project.slug} className="group overflow-hidden rounded-3xl border border-slate-200 bg-white/80 shadow-sm transition hover:-translate-y-1 hover:border-sky-400 hover:shadow-glow dark:border-slate-700 dark:bg-slate-900/70">
-                <div className={`h-40 bg-gradient-to-br ${project.accent} p-6`}>
-                  <div className="flex h-full items-end justify-between">
-                    <div className="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white">
-                      {project.category}
-                    </div>
-                    {project.badge && (
-                      <div className="rounded-full bg-slate-950/20 px-3 py-1 text-xs font-semibold text-white">
-                        {project.badge}
+                {project.image ? (
+                  <div className="relative h-40 overflow-hidden">
+                    <img src={project.image} alt={project.title} className="h-full w-full object-cover" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 to-transparent" />
+                    <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-6">
+                      <div className="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white">
+                        {project.category}
                       </div>
-                    )}
+                      {project.badge && (
+                        <div className="rounded-full bg-slate-950/20 px-3 py-1 text-xs font-semibold text-white">
+                          {project.badge}
+                        </div>
+                      )}
+                    </div>
                   </div>
-                </div>
+                ) : (
+                  <div className={`h-40 bg-gradient-to-br ${project.accent} p-6`}>
+                    <div className="flex h-full items-end justify-between">
+                      <div className="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white">
+                        {project.category}
+                      </div>
+                      {project.badge && (
+                        <div className="rounded-full bg-slate-950/20 px-3 py-1 text-xs font-semibold text-white">
+                          {project.badge}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
 
                 <div className="p-6">
                   <h3 className="text-2xl font-bold text-slate-900 dark:text-white">{project.title}</h3>
@@ -386,7 +429,13 @@ export default function HomePage() {
           <div className="grid gap-6 lg:grid-cols-2">
             {portfolioData.blogs.map((blog) => (
               <article key={blog.slug} className="overflow-hidden rounded-3xl border border-slate-200 bg-white/80 shadow-sm dark:border-slate-700 dark:bg-slate-900/70">
-                <div className="h-52 bg-gradient-to-br from-sky-500 to-violet-500" />
+                {blog.coverImage ? (
+                  <div className="relative h-52 overflow-hidden">
+                    <img src={blog.coverImage} alt={blog.title} className="h-full w-full object-cover" />
+                  </div>
+                ) : (
+                  <div className="h-52 bg-gradient-to-br from-sky-500 to-violet-500" />
+                )}
                 <div className="p-6">
                   <div className="flex items-center justify-between gap-3 text-xs uppercase tracking-[0.2em] text-sky-500">
                     <span>{blog.category}</span>

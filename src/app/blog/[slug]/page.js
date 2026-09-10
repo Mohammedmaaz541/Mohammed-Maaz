@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
-import { portfolioData } from '@/data/portfolioData';
+import { getPortfolioContent } from '@/lib/portfolio-store';
 
-export default function BlogDetailPage({ params }) {
+export default async function BlogDetailPage({ params }) {
+  const portfolioData = await getPortfolioContent();
   const blog = portfolioData.blogs.find((item) => item.slug === params.slug);
 
   if (!blog) {
@@ -18,7 +19,13 @@ export default function BlogDetailPage({ params }) {
       </Link>
 
       <article className="mx-auto max-w-4xl rounded-3xl border border-slate-200 bg-white/80 p-8 shadow-sm dark:border-slate-700 dark:bg-slate-900/70">
-        <div className="mb-6 h-64 rounded-2xl bg-gradient-to-br from-sky-500 to-violet-500" />
+        {blog.coverImage ? (
+          <div className="mb-6 overflow-hidden rounded-2xl">
+            <img src={blog.coverImage} alt={blog.title} className="h-64 w-full object-cover" />
+          </div>
+        ) : (
+          <div className="mb-6 h-64 rounded-2xl bg-gradient-to-br from-sky-500 to-violet-500" />
+        )}
 
         <div className="mb-4 flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.2em] text-sky-500">
           <span>{blog.category}</span>

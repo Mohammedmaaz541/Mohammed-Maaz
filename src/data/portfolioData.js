@@ -1,3 +1,18 @@
+// Portfolio content is centralized here so you can update the site later without changing UI components.
+// Add or edit entries in these sections:
+// - profile
+// - skills
+// - experiences
+// - projects
+// - certifications
+// - achievements
+// - blogs
+// - github
+// - contact
+// - resume
+
+export const portfolioStorageKey = 'portfolio-content-v1';
+
 export const portfolioData = {
   profile: {
     name: 'Mohammed Maaz',
@@ -36,44 +51,58 @@ export const portfolioData = {
     {
       step: '01',
       title: 'Understand',
+      tagline: 'Clarity before code.',
       description: 'Explore requirements, constraints, user needs, and the business problem that needs solving.',
       accent: 'from-sky-500 to-blue-500',
     },
     {
       step: '02',
       title: 'Design',
+      tagline: 'Ideas into systems.',
       description: 'Map architecture, interfaces, workflows, and the information model before pushing code.',
       accent: 'from-cyan-500 to-teal-500',
     },
     {
       step: '03',
       title: 'Build',
+      tagline: 'Reliable products, built well.',
       description: 'Develop reliable products with modern frontend, backend, and integration patterns.',
       accent: 'from-violet-500 to-indigo-500',
     },
     {
       step: '04',
       title: 'Automate',
+      tagline: 'Less manual work, more consistency.',
       description: 'Create workflows, monitoring, and operational systems that reduce manual work.',
       accent: 'from-emerald-500 to-teal-500',
     },
     {
       step: '05',
       title: 'Secure',
+      tagline: 'Protect what matters.',
       description: 'Embed security practices, governance, and access controls from the beginning.',
       accent: 'from-amber-500 to-orange-500',
     },
     {
       step: '06',
       title: 'Deploy',
+      tagline: 'Launch with confidence.',
       description: 'Ship through CI/CD pipelines with reproducible environments and controlled releases.',
       accent: 'from-pink-500 to-rose-500',
     },
     {
       step: '07',
       title: 'Scale',
+      tagline: 'Grow without chaos.',
       description: 'Tune infrastructure, observability, and resilience for long-term product growth.',
       accent: 'from-indigo-500 to-sky-500',
+    },
+    {
+      step: '08',
+      title: 'Support',
+      tagline: 'Keep systems healthy.',
+      description: 'Monitor performance, refine workflows, and improve the product continuously after launch.',
+      accent: 'from-teal-500 to-cyan-500',
     },
   ],
   skills: [

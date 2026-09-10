@@ -1,7 +1,6 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import AppShell from '@/components/layout/AppShell';
 import ThemeScript from '@/components/layout/ThemeScript';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -32,11 +31,7 @@ export default function RootLayout({ children }) {
         <ThemeScript />
       </head>
       <body className={`${inter.className} bg-[var(--background)] text-[var(--foreground)]`}>
-        <div className="min-h-screen">
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </div>
+        <AppShell>{children}</AppShell>
       </body>
     </html>
   );
